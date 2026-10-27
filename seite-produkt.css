@@ -1,0 +1,186 @@
+/* Canvas Produkt.dc.html */
+body{margin:0;background:#FFFFFF}
+.seite{--gruen:#1F2428;--gruen-hover:#000000;--gruen-hell:#EFF0EC;--ok:#1F2428;--ok-bg:#DFEEA6;--lime:#DFEEA6}
+.seite .sek--dunkel .k--primaer{background:#FFFFFF;color:#1F2428}.seite .sek--dunkel .k--primaer:hover{background:#EFF0EC}
+a{color:#22272B}a:hover{color:#1F2428}
+/* Streifen je zwei Sections (wie Startseite) */
+.sek--grau+.sek--grau,.sek--hell+.sek--hell{border-top:0;padding-top:0}
+.kopf-mitte{text-align:center}
+.seite .kopf-mitte h2,.kopf-mitte .text{margin-inline:auto}
+.seite #wirtschaftlichkeit h2{max-width:30ch}
+#wirtschaftlichkeit .text{max-width:62ch}
+.fl-liste{grid-auto-rows:auto;row-gap:0}
+.fl-schritt{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:12px;align-content:start;min-height:0;padding:0;background:transparent!important;border:0!important;border-radius:0}
+.fl-box{display:flex;flex-direction:column;gap:6px;background:#FFFFFF;border:1px solid #E6E6E2;border-radius:10px;padding:14px 14px 16px;min-height:78px}
+.fl-ekvit .fl-box{border-color:#D5D7D2;background:#FFFFFF}
+.fl-detail{font-size:.8125rem;line-height:1.45;padding:0 4px;align-self:start}
+.fl-sie{margin:0 4px;align-self:start;justify-self:start;background:#DFEEA6;color:#1F2428;border:0;font-weight:600}
+.fl-schritt:not(:last-child)::after{top:39px}
+.seite #uebersicht{padding-block:clamp(48px,6vw,72px)}
+/* Hero-Animation: ein Fall läuft Schritt für Schritt durch (18 s Schleife) */
+.ani{max-width:760px;margin:0 auto}
+.ani-kopf{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;padding:16px 20px 12px}
+.ani-kopf strong{display:block;font:600 .9375rem/1.3 Inter,system-ui,sans-serif;color:#22272B}
+.ani-kopf small{color:#6F767C;font-size:.75rem}
+.ani-balken{height:4px;margin:0 20px;border-radius:2px;background:#EEEEEA;overflow:hidden}
+.ani-balken span{display:block;height:100%;width:0;background:#1F2428;animation:ani-balken 18s linear infinite}
+.ani-liste{list-style:none;margin:0;padding:8px 20px 14px;display:grid}
+.ani-liste li{display:grid;grid-template-columns:30px minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #F0F0EE;opacity:.22}
+.ani-liste li:last-child{border-bottom:0}
+.ani-liste b{display:block;font-size:.875rem;color:#22272B}
+.ani-liste div span{font-size:.8125rem;color:#6F767C}
+.ani-nr{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:.6875rem;font-weight:600;color:#FFFFFF;background:#22272B}
+.ani-liste em{font-style:normal;opacity:0}
+.ani-lime{background:#DFEEA6;color:#1F2428}
+.a1{animation:a1 18s infinite}.a1 em{animation:e1 18s infinite}
+.a2{animation:a2 18s infinite}.a2 em{animation:e2 18s infinite}
+.a3{animation:a3 18s infinite}.a3 em{animation:e3 18s infinite}
+.a4{animation:a4 18s infinite}.a4 em{animation:e4 18s infinite}
+.a5{animation:a5 18s infinite}.a5 em{animation:e5 18s infinite}
+.a6{animation:a6 18s infinite}.a6 em{animation:e6 18s infinite}
+.a7{animation:a7 18s infinite}.a7 em{animation:e7 18s infinite}
+@keyframes a1{0%{opacity:.22}3%,88%{opacity:1}96%,100%{opacity:.22}}
+@keyframes a2{0%,11%{opacity:.22}14%,88%{opacity:1}96%,100%{opacity:.22}}
+@keyframes a3{0%,22%{opacity:.22}25%,88%{opacity:1}96%,100%{opacity:.22}}
+@keyframes a4{0%,33%{opacity:.22}36%,88%{opacity:1}96%,100%{opacity:.22}}
+@keyframes a5{0%,44%{opacity:.22}47%,88%{opacity:1}96%,100%{opacity:.22}}
+@keyframes a6{0%,55%{opacity:.22}58%,88%{opacity:1}96%,100%{opacity:.22}}
+@keyframes a7{0%,66%{opacity:.22}69%,88%{opacity:1}96%,100%{opacity:.22}}
+@keyframes e1{0%,4%{opacity:0}7%,88%{opacity:1}96%,100%{opacity:0}}
+@keyframes e2{0%,15%{opacity:0}18%,88%{opacity:1}96%,100%{opacity:0}}
+@keyframes e3{0%,26%{opacity:0}29%,88%{opacity:1}96%,100%{opacity:0}}
+@keyframes e4{0%,37%{opacity:0}40%,88%{opacity:1}96%,100%{opacity:0}}
+@keyframes e5{0%,48%{opacity:0}51%,88%{opacity:1}96%,100%{opacity:0}}
+@keyframes e6{0%,59%{opacity:0}62%,88%{opacity:1}96%,100%{opacity:0}}
+@keyframes e7{0%,70%{opacity:0}73%,88%{opacity:1}96%,100%{opacity:0}}
+@keyframes ani-balken{0%{width:0}72%,88%{width:100%}96%,100%{width:0}}
+/* Datensicherheit: wo die Daten liegen, wie sie geschützt sind (ohne Anbieternamen) */
+.ds{margin-top:40px;background:#F7F7F5;border-radius:24px;padding:36px 40px 28px;display:grid;gap:28px}
+.seite .ds-titel{margin:0 0 18px;font-size:.75rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#6F767C}
+.ds-gruppe+.ds-gruppe{border-top:1px solid #E6E6E2;padding-top:28px}
+.ds-reihe{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.ds-item{display:grid;gap:10px;align-content:start}
+.ds-icon{width:44px;height:44px;border-radius:12px;background:#DFEEA6;display:grid;place-items:center}
+.ds-ort{justify-self:start;font-size:.6875rem;font-weight:600;color:#1F2428;border:1px solid #1F2428;border-radius:999px;padding:3px 9px}
+.seite .ds-item p{margin:0;font-size:.9375rem;line-height:1.45;color:#22272B}
+.seite .ds-fuss{margin:0;font-size:.8125rem;color:#6F767C}
+@media (max-width:899px){.ds{padding:28px 22px}.ds-reihe{grid-template-columns:1fr 1fr}}
+.dt-kopf{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(24px,5vw,72px);align-items:end}
+.seite .dt-kopf h2{margin:0;max-width:24ch}.seite .dt-kopf .text{margin:0 0 6px}
+.dt{margin-top:44px;border:1px solid #E6E6E2;border-radius:22px;overflow-x:auto;background:#FFFFFF}
+.dt table{width:100%;min-width:720px;border-collapse:collapse;font-size:.9875rem}
+.dt th{text-align:left;font-size:.8125rem;font-weight:600;color:#6F767C;padding:18px 28px;background:#F7F7F5;border-bottom:1px solid #E6E6E2}
+.dt td{padding:20px 28px;border-bottom:1px solid #EFEFEC;vertical-align:top;color:#22272B;line-height:1.5}
+.dt tr:last-child td{border-bottom:0}
+.dt td:first-child{font-weight:600;width:24%}
+.dt td:nth-child(2){width:34%;white-space:nowrap}
+.dt td{padding-block:16px}
+.dt-ort{display:inline-block;margin:0 6px 4px 0;font-size:.6875rem;font-weight:600;color:#1F2428;background:#EFF0EC;border-radius:999px;padding:3px 9px;vertical-align:1px}
+.dt-ort--sie{background:#EEF0EA}
+.seite .dt-fuss{margin:16px 0 0;font-size:.875rem;color:#6F767C;max-width:90ch}
+@media (max-width:899px){.dt-kopf{grid-template-columns:1fr;gap:12px}}
+/* Wirtschaftlichkeit: Rechenbeispiel als Rechnung */
+.rb{margin-top:40px;background:#FFFFFF;border-radius:20px;padding:28px 32px 22px;box-shadow:0 12px 32px -16px rgba(25,25,20,.18)}
+.seite .rb-kopf{margin:0 0 18px;font-size:.75rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#6F767C}
+.rb-zeile{display:flex;flex-wrap:wrap;align-items:stretch;gap:12px}
+.rb-wert{flex:1 1 140px;display:grid;gap:4px;align-content:center;background:#F7F7F5;border-radius:14px;padding:18px 18px}
+.rb-wert b{font:400 clamp(1.6rem,1.2rem + 1vw,2.2rem)/1.1 "Source Serif 4",Georgia,serif;color:#22272B;font-variant-numeric:tabular-nums;white-space:nowrap}
+.rb-wert span{font-size:.8125rem;line-height:1.35;color:#6F767C}
+.rb-op{align-self:center;font-size:1.5rem;color:#9AA0A4;padding:0 2px}
+.rb-ergebnis{background:#DFEEA6}
+.rb-ergebnis span{color:#1F2428}
+.seite .rb-fuss{margin:14px 0 0;font-size:.8125rem;color:#6F767C}
+/* Service-Signal Leistung: Arbeitsplatz-Kennzeichnung, Rollen */
+.sx-ort{position:absolute;top:14px;left:16px;z-index:1;font-size:.6875rem;font-weight:600;border-radius:999px;padding:3px 10px}
+.sx-ort--uns{background:#22272B;color:#FFFFFF}.sx-ort--sie{background:#DFEEA6;color:#1F2428}
+.seite .sx-caption{margin:14px 0 0;text-align:center;font-size:.8125rem;color:#6F767C}
+.seite .ani-ap{display:flex;align-items:center;gap:8px;margin:0 20px 12px;font-size:.8125rem;color:#22272B;background:#F7F7F5;border-radius:8px;padding:8px 10px}
+.ani-ap i{font-style:normal;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#22272B;color:#FFFFFF;font-size:.6875rem;font-weight:700}
+.ani-wer{display:inline-block;margin-left:6px;font-size:.625rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;border-radius:999px;padding:2px 7px;vertical-align:2px}
+.ani-wer--erp{background:#EFF0EC;color:#4A5157}.ani-wer--team{background:#22272B;color:#FFFFFF}.ani-wer--sie{background:#DFEEA6;color:#1F2428}
+/* Im Detail: Bildschirm mittig fixiert, Schritte laufen rechts/links vorbei (Vorbild SumUp) */
+.sx-kopf{text-align:center}.seite .sx-kopf h2{margin-inline:auto}
+.sx{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,500px) minmax(0,1fr);column-gap:40px;margin-top:24px;margin-inline:calc((min(1360px, 100vw - 48px) - 100%) / -2)}
+.sx-buehne{grid-column:2;grid-row:1 / span 7;position:sticky;top:120px;align-self:start}
+.sx-monitor{background:#22272B;border-radius:20px;padding:12px;box-shadow:0 30px 60px -24px rgba(25,25,20,.35)}
+.sx-screen{position:relative;background:#F7F7F5;border-radius:10px;height:400px;overflow:hidden}
+.sx-panel{position:absolute;inset:0;padding:24px;display:flex;align-items:center;opacity:0;transform:translateY(14px);transition:opacity .4s,transform .4s}
+.sx-panel.an{opacity:1;transform:none}
+.sx-panel .mu{width:100%;box-shadow:0 8px 24px rgba(25,25,20,.08)}
+.sx-hals{width:64px;height:36px;margin:0 auto;background:linear-gradient(180deg,#C9CAC5,#E4E5E0)}
+.sx-fuss{width:200px;height:9px;margin:0 auto;border-radius:6px;background:#D6D7D2}
+.sx-liste{display:contents}
+.sx-schritt{display:flex;align-items:center;min-height:480px;opacity:.3;transition:opacity .35s}
+.sx-schritt.an{opacity:1}
+.sx-schritt:nth-child(odd){grid-column:3}.sx-schritt:nth-child(even){grid-column:1;justify-content:flex-end}
+.sx-schritt:nth-child(1){grid-row:1}.sx-schritt:nth-child(2){grid-row:2}.sx-schritt:nth-child(3){grid-row:3}.sx-schritt:nth-child(4){grid-row:4}.sx-schritt:nth-child(5){grid-row:5}.sx-schritt:nth-child(6){grid-row:6}.sx-schritt:nth-child(7){grid-row:7}
+.sx-karte{width:100%;max-width:400px;background:#FFFFFF;border:2px solid #E6E6E2;border-radius:16px;padding:22px 24px;transition:border-color .35s,box-shadow .35s}
+.sx-schritt.an .sx-karte{border-color:#22272B}
+.sx-schritt.an .schritt-nr{background:#22272B;color:#FFFFFF;border-color:#22272B}
+.seite .sx-karte .schritt-titel{font:400 1.5rem/1.25 "Source Serif 4",Georgia,serif;color:#22272B;margin:4px 0 8px}
+.seite .sx-karte p{margin:0}
+@media (max-width:899px){.sx{grid-template-columns:1fr;margin-inline:0}.sx-buehne{grid-column:1;grid-row:1;position:static}.sx-screen{height:340px}.sx-schritt{grid-column:1!important;grid-row:auto!important;min-height:0;padding:20px 0;opacity:1;justify-content:flex-start!important}}
+@media (prefers-reduced-motion:reduce){.sx-panel{transition:none}}
+@media (prefers-reduced-motion:reduce){.ani-liste li,.ani-liste em,.ani-balken span{animation:none;opacity:1;width:100%}}
+.kurz{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:28px}
+.kurz-s{display:inline-flex;align-items:center;gap:8px;border:1px solid #E6E6E2;background:#FFFFFF;border-radius:999px;padding:9px 15px;font-size:.875rem;font-weight:600;color:#22272B}
+.kurz-s.ek{border-color:#1F2428;background:#FFFFFF}
+.kurz-s small{font-weight:500;color:#6F767C;font-size:.75rem}
+.kurz-s i{width:9px;height:9px;border-radius:50%;background:#DFEEA6;box-shadow:none}
+.kurz-pf{color:#9AA0A4;font-size:.875rem}
+.kurz-leg{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;margin-top:18px;font-size:.8125rem;color:#6F767C}
+.kurz-leg span{display:inline-flex;align-items:center;gap:7px}
+.kurz-leg b{width:12px;height:12px;border-radius:50%;border:1px solid #E6E6E2;background:#FFFFFF}
+.kurz-leg b.ek{border-color:#1F2428;background:#FFFFFF}
+.kurz-leg i{width:9px;height:9px;border-radius:50%;background:#DFEEA6;box-shadow:none}
+.kurz-leg a{margin-left:auto;font-weight:600;color:#22272B}
+/* R8 Feedback Josch 27.10. abends: mehr Luft zwischen gleichfarbigen Sections + feine Trennlinie, Knöpfe kleiner */
+.seite .sek--grau+.sek--grau,.seite .sek--hell+.sek--hell{border-top:0;padding-top:var(--sektion);position:relative}
+.seite .sek--grau+.sek--grau::before,.seite .sek--hell+.sek--hell::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(var(--breite),calc(100% - 2*var(--rand)));border-top:1px solid #E6E6E2}
+.seite .k{min-height:44px;padding:0 20px;font-size:.875rem}
+.seite .k--text{min-height:0;padding:0}
+.seite .k--klein{min-height:38px;padding:0 16px;font-size:.8125rem}
+.ani{max-width:880px}
+.hero.mit-bild-unten .knoepfe{align-items:center;gap:12px 24px}
+/* Arbeitsplatz als App-Fenster statt Monitor mit Fuß; Inhalte passen ohne Abschneiden */
+@media (min-width:900px){.sx{grid-template-columns:minmax(0,1fr) minmax(0,580px) minmax(0,1fr)}}
+.sx-monitor{background:#FFFFFF;border:1px solid #E6E6E2;border-radius:18px;padding:0;overflow:hidden;box-shadow:0 30px 60px -28px rgba(25,25,20,.28),0 2px 6px rgba(25,25,20,.05)}
+.sx-bar{display:flex;align-items:center;gap:6px;padding:11px 16px;border-bottom:1px solid #EFEFEC;background:#FAFAF8}
+.sx-bar i{width:9px;height:9px;border-radius:50%;background:#E3E4DF}
+.sx-bar span{margin-left:10px;font-size:.75rem;font-weight:600;color:#6F767C}
+.sx-screen{border-radius:0;height:450px}
+.sx-panel{flex-direction:column;align-items:stretch;justify-content:center;gap:10px;padding:20px 22px}
+.sx-ort{position:static;align-self:flex-start}
+.sx-panel .mu-tab th,.sx-panel .mu-tab td{padding:7px 8px;font-size:.75rem}
+.sx-panel .mu-tab table{min-width:0;width:100%}
+.sx-panel .pill{font-size:.6875rem;padding:2px 8px;white-space:nowrap;min-width:0}
+.sx-panel .mu-quelle{display:flex;flex-wrap:wrap;gap:6px}
+@media (max-width:899px){.sx-buehne{display:none}.sx-caption{display:none}}
+/* Datensicherheit als zwei Gruppen Karten statt Tabelle */
+.ds2{margin-top:40px;display:grid;gap:14px}
+.ds2-gruppe{margin:10px 0 0;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#6F767C}
+.ds2-reihe{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ds2-k{background:#FFFFFF;border:1px solid #E6E6E2;border-radius:16px;padding:22px 24px;display:grid;align-content:start;gap:6px}
+.ds2-k .dt-ort{justify-self:start;margin:0 0 6px}
+.seite .ds2-k h3{font-size:1.0625rem;margin:0}
+.seite .ds2-wo{margin:0;font-size:.9375rem;color:#22272B}
+.ds2-k ul{margin:8px 0 0;padding:0;list-style:none;display:grid;gap:4px;font-size:.875rem;color:#4A5157}
+.ds2-k li{display:flex;gap:8px}.ds2-k li::before{content:"✓";color:#1F2428;font-size:.75rem;font-weight:700}
+@media (max-width:899px){.ds2-reihe{grid-template-columns:1fr}}
+/* Canvas Produkt2.dc.html */
+body{margin:0;background:#FFFFFF}
+.seite{--gruen:#1F2428;--gruen-hover:#000000;--gruen-hell:#EFF0EC;--ok:#1F2428;--ok-bg:#DFEEA6;--lime:#DFEEA6}
+.seite .sek--dunkel .k--primaer{background:#FFFFFF;color:#1F2428}.seite .sek--dunkel .k--primaer:hover{background:#EFF0EC}
+a{color:#22272B}a:hover{color:#1F2428}
+/* Streifen je zwei Sections, Headlines wechseln links/mittig (wie Startseite) */
+.sek--grau+.sek--grau,.sek--hell+.sek--hell{border-top:0;padding-top:0}
+.kopf-mitte{text-align:center}
+.seite .kopf-mitte h2,.kopf-mitte .text{margin-inline:auto}
+.kopf-mitte .knoepfe{justify-content:center}
+.kopf-mitte .form-karte{margin-inline:auto;text-align:left}
+/* R8 Feedback Josch 27.10. abends: mehr Luft zwischen gleichfarbigen Sections + feine Trennlinie, Knöpfe kleiner */
+.seite .sek--grau+.sek--grau,.seite .sek--hell+.sek--hell{border-top:0;padding-top:var(--sektion);position:relative}
+.seite .sek--grau+.sek--grau::before,.seite .sek--hell+.sek--hell::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(var(--breite),calc(100% - 2*var(--rand)));border-top:1px solid #E6E6E2}
+.seite .k{min-height:44px;padding:0 20px;font-size:.875rem}
+.seite .k--text{min-height:0;padding:0}
+.seite .k--klein{min-height:38px;padding:0 16px;font-size:.8125rem}

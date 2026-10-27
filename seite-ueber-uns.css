@@ -1,0 +1,12 @@
+/* Canvas UeberUns.dc.html */
+body{margin:0;background:#FFFFFF}
+.seite{--gruen:#1F2428;--gruen-hover:#000000;--gruen-hell:#EFF0EC;--ok:#1F2428;--ok-bg:#DFEEA6;--lime:#DFEEA6}
+.seite .sek--dunkel .k--primaer{background:#FFFFFF;color:#1F2428}.seite .sek--dunkel .k--primaer:hover{background:#EFF0EC}
+a{color:#22272B}a:hover{color:#1F2428}
+/* R8 Feedback Josch 27.10. abends: mehr Luft zwischen gleichfarbigen Sections + feine Trennlinie, Knöpfe kleiner */
+.seite .sek--grau+.sek--grau,.seite .sek--hell+.sek--hell{border-top:0;padding-top:var(--sektion);position:relative}
+.seite .sek--grau+.sek--grau::before,.seite .sek--hell+.sek--hell::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(var(--breite),calc(100% - 2*var(--rand)));border-top:1px solid #E6E6E2}
+.seite .k{min-height:44px;padding:0 20px;font-size:.875rem}
+.seite .k--text{min-height:0;padding:0}
+.seite .k--klein{min-height:38px;padding:0 16px;font-size:.8125rem}
+.ue-illu{display:block;width:100%;max-width:480px;height:auto;margin-inline:auto}

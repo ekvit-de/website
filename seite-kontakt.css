@@ -1,0 +1,25 @@
+/* Canvas Kontakt.dc.html */
+body{margin:0;background:#FFFFFF}
+.seite{--gruen:#1F2428;--gruen-hover:#000000;--gruen-hell:#EFF0EC;--ok:#1F2428;--ok-bg:#DFEEA6;--lime:#DFEEA6}
+.seite .sek--dunkel .k--primaer{background:#FFFFFF;color:#1F2428}.seite .sek--dunkel .k--primaer:hover{background:#EFF0EC}
+a{color:#22272B}a:hover{color:#1F2428}
+/* R8 Feedback Josch 27.10. abends: mehr Luft zwischen gleichfarbigen Sections + feine Trennlinie, Knöpfe kleiner */
+.seite .sek--grau+.sek--grau,.seite .sek--hell+.sek--hell{border-top:0;padding-top:var(--sektion);position:relative}
+.seite .sek--grau+.sek--grau::before,.seite .sek--hell+.sek--hell::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(var(--breite),calc(100% - 2*var(--rand)));border-top:1px solid #E6E6E2}
+.seite .k{min-height:44px;padding:0 20px;font-size:.875rem}
+.seite .k--text{min-height:0;padding:0}
+.seite .k--klein{min-height:38px;padding:0 16px;font-size:.8125rem}
+/* Kontakt */
+.seite .hero h1{max-width:24ch}
+.seite .hero{padding-bottom:clamp(32px,4vw,48px)}
+.seite #kontaktwege{padding-top:clamp(24px,3vw,40px);border-top:0}
+.kopf-mitte{text-align:center}.seite .kopf-mitte h2{margin-inline:auto}
+.kw{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,56px);align-items:start}
+.kw .form-karte{margin:0;max-width:none}
+.kw-titel{font:400 1.375rem/1.3 "Source Serif 4",Georgia,serif;color:#22272B;margin:0 0 16px}
+.kw-wege{display:grid;gap:14px}
+.kw-k{background:#FFFFFF;border:1px solid #E6E6E2;border-radius:14px;padding:20px 22px;display:grid;gap:4px}
+.seite .kw-k h3{margin:0;font-size:1rem}.seite .kw-k p{margin:0;font-size:.9375rem}
+.kw-k .k{justify-self:start;margin-top:10px}
+.kw-adr{margin:6px 0 0;font-size:.8125rem;color:#6F767C}
+@media (max-width:899px){.kw{grid-template-columns:1fr}}

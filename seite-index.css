@@ -1,0 +1,104 @@
+/* Canvas Main.dc.html */
+body{margin:0;background:#FFFFFF}
+.seite{--gruen:#1F2428;--gruen-hover:#000000;--gruen-hell:#EFF0EC;--ok:#1F2428;--ok-bg:#DFEEA6;--lime:#DFEEA6}
+.seite .sek--dunkel .k--primaer{background:#FFFFFF;color:#1F2428}.seite .sek--dunkel .k--primaer:hover{background:#EFF0EC}
+a{color:#22272B}a:hover{color:#1F2428}
+/* Design v5 (Schrift, Abstände, Streifen) – Streifen jetzt je zwei Sections, Headlines wechseln links/mittig/rechts */
+.sek--grau+.sek--grau,.sek--hell+.sek--hell{border-top:0;padding-top:0}
+.kopf-mitte{text-align:center}
+.seite .kopf-mitte h2,.kopf-mitte .text{margin-inline:auto}
+.kopf-mitte+.knoepfe,.kopf-mitte .knoepfe{justify-content:center}
+.kopf-rechts{text-align:right}
+.seite .kopf-rechts h2,.kopf-rechts .text{margin-left:auto}
+/* Hero-Animation Start: Status je Differenz wechselt von „fehlt“ über „angefragt“ zum Ergebnis (18 s Schleife) */
+.sa{max-width:760px;margin:0 auto}
+.sa-st{position:relative;height:30px;min-width:170px}
+.sa-st .pill{position:absolute;left:10px;top:50%;transform:translateY(-50%);min-width:150px;text-align:center}
+.sa-st .pill+.pill{opacity:0}
+.sa-b1{animation:sab1 18s infinite}.sa-c1{animation:sac1 18s infinite}
+.sa-b2{animation:sab2 18s infinite}.sa-c2{animation:sac2 18s infinite}
+.sa-b3{animation:sab3 18s infinite}.sa-c3{animation:sac3 18s infinite}
+.sa-b4{animation:sab4 18s infinite}.sa-c4{animation:sac4 18s infinite}
+@keyframes sab1{0%,20%{opacity:0}23%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sab2{0%,25%{opacity:0}28%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sab3{0%,30%{opacity:0}33%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sab4{0%,35%{opacity:0}38%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sac1{0%,48%{opacity:0}51%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sac2{0%,55%{opacity:0}58%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sac3{0%,62%{opacity:0}65%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sac4{0%,69%{opacity:0}72%,90%{opacity:1}96%,100%{opacity:0}}
+.sa-fort{display:grid;gap:6px;margin-top:2px}
+.sa-fort-l{font-size:.75rem;color:#6F767C}
+.sa-balken{height:6px;border-radius:3px;background:#EEEEEA;overflow:hidden}
+.sa-balken span{display:block;height:100%;width:0;background:#1F2428;animation:sabar 18s infinite}
+@keyframes sabar{0%,48%{width:0}51%,55%{width:25%}58%,62%{width:50%}65%,69%{width:75%}72%,90%{width:88%}96%,100%{width:0}}
+@media (prefers-reduced-motion:reduce){.sa-st .pill+.pill,.sa-balken span{animation:none}.sa-st [class*="sa-c"]{opacity:1}.sa-balken span{width:88%}}
+/* Service-Signal: Label, Häkchen, Team-Hinweis, So arbeiten wir */
+.hero-haken{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px;font-size:.875rem;color:#4A5157}
+.hero-haken li{display:inline-flex;align-items:center;gap:8px}
+.hero-haken li::before{content:"✓";display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#EFF0EC;color:#1F2428;font-size:.6875rem;font-weight:700}
+.seite .sa-team{display:flex;align-items:center;gap:8px;margin:0;font-size:.8125rem;color:#22272B;background:#F7F7F5;border-radius:8px;padding:8px 10px}
+.sa-team i{font-style:normal;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#22272B;color:#FFFFFF;font-size:.6875rem;font-weight:700}
+.seite #so-arbeiten{padding-block:clamp(48px,6vw,80px)}
+.sw{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr) 28px minmax(0,1fr);gap:12px;align-items:stretch}
+.sw-k{background:#FFFFFF;border:1px solid #E6E6E2;border-radius:16px;padding:22px 24px;display:grid;gap:6px;align-content:start}
+.sw-k b{font:400 1.375rem/1.25 "Source Serif 4",Georgia,serif;color:#22272B}
+.seite .sw-k p{margin:0;font-size:.9375rem}
+.sw-k--team{border:1.5px solid #22272B}
+.sw-tag{justify-self:start;font-size:.6875rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#4A5157;background:#EFF0EC;border-radius:999px;padding:3px 9px}
+.sw-tag--lime{background:#DFEEA6;color:#1F2428}
+.sw-pf{align-self:center;text-align:center;font-size:1.25rem;color:#9AA0A4}
+@media (max-width:899px){.sw{grid-template-columns:1fr}.sw-pf{transform:rotate(90deg)}}
+/* Prozess-Grafik */
+.fl-liste{grid-auto-rows:auto;row-gap:0}
+.fl-schritt{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:12px;align-content:start;min-height:0;padding:0;background:transparent!important;border:0!important;border-radius:0}
+.fl-box{display:flex;flex-direction:column;gap:6px;background:#FFFFFF;border:1px solid #E6E6E2;border-radius:10px;padding:14px 14px 16px;min-height:78px}
+.fl-ekvit .fl-box{border-color:#D5D7D2;background:#FFFFFF}
+.fl-detail{font-size:.8125rem;line-height:1.45;padding:0 4px;align-self:start}
+.fl-sie{margin:0 4px;align-self:start;justify-self:start;background:#DFEEA6;color:#1F2428;border:0;font-weight:600}
+.fl-schritt:not(:last-child)::after{top:39px}
+/* Vertrauen (auf Grau: Karten weiß) */
+#vertrauen .karten{gap:16px;margin-top:44px}
+#vertrauen .karte{background:#FFFFFF;border:0;border-radius:14px;padding:28px;gap:8px}
+#vertrauen .karte h3{font-size:1.125rem}
+.v-icon{width:44px;height:44px;border-radius:12px;background:#EFF0EC;display:grid;place-items:center;margin-bottom:14px}
+#vertrauen .knoepfe{justify-content:center}
+.seite #ownership h2{max-width:34ch}
+#ownership .text{max-width:72ch}
+/* Herausforderung */
+.ow2{margin:44px 0 0}
+.ow2-stationen{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.ow2-stationen li{position:relative;background:#FFFFFF;border:1px solid #E6E6E2;border-radius:12px;padding:16px 18px;display:grid;gap:2px}
+.ow2-stationen b{color:#22272B;font-size:.9375rem}
+.ow2-stationen span{font-size:.8125rem;line-height:1.4;color:#6F767C}
+.ow2-stationen li::after{content:"";position:absolute;left:50%;bottom:-30px;height:29px;border-left:2px solid #1F2428}
+.ow2-ekvit{margin-top:29px;background:#FFFFFF;border:2px solid #1F2428;border-radius:12px;padding:18px 22px;display:flex;gap:10px 18px;align-items:center;flex-wrap:wrap}
+.ow2-ekvit b{color:#1F2428;font-size:1.0625rem;display:flex;align-items:center;gap:8px}
+.ow2-ekvit b::before{content:"";width:10px;height:10px;border-radius:50%;background:#DFEEA6;box-shadow:none}
+.ow2-ekvit span{color:#22272B;font-size:.9375rem}
+@media (max-width:899px){
+.kopf-rechts{text-align:left}.seite .kopf-rechts h2,.kopf-rechts .text{margin-left:0}#vertrauen .knoepfe{justify-content:flex-start}
+.ow2-stationen{grid-template-columns:1fr 1fr}.ow2-stationen li::after{display:none}.ow2-ekvit{margin-top:16px}
+}
+/* R8 Feedback Josch 27.10. abends: mehr Luft zwischen gleichfarbigen Sections + feine Trennlinie, Knöpfe kleiner */
+.seite .sek--grau+.sek--grau,.seite .sek--hell+.sek--hell{border-top:0;padding-top:var(--sektion);position:relative}
+.seite .sek--grau+.sek--grau::before,.seite .sek--hell+.sek--hell::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(var(--breite),calc(100% - 2*var(--rand)));border-top:1px solid #E6E6E2}
+.seite .k{min-height:44px;padding:0 20px;font-size:.875rem}
+.seite .k--text{min-height:0;padding:0}
+.seite .k--klein{min-height:38px;padding:0 16px;font-size:.8125rem}
+/* Hero: leichter Farbton + angedeutetes Lager, Lead auf 2 Zeilen, Animation breiter */
+.seite .hero.mit-bild-unten{background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='260' viewBox='0 0 420 260' opacity='.55'> <g fill='none' stroke='%23D3DAE2' stroke-width='3'><path d='M20 20v240M200 20v240M220 20v240M400 20v240'/><path d='M20 80h180M20 150h180M20 220h180M220 80h180M220 150h180M220 220h180'/></g> <g><rect x='34' y='44' width='46' height='36' rx='3' fill='%23ECE6DC'/><rect x='86' y='54' width='34' height='26' rx='3' fill='%23DFE6EE'/><rect x='128' y='38' width='56' height='42' rx='3' fill='%23E4E7EA'/> <rect x='40' y='112' width='60' height='38' rx='3' fill='%23DFE6EE'/><rect x='108' y='122' width='40' height='28' rx='3' fill='%23E8E3EA'/> <rect x='34' y='186' width='38' height='34' rx='3' fill='%23E4E7EA'/><rect x='80' y='176' width='54' height='44' rx='3' fill='%23ECE6DC'/><rect x='142' y='192' width='44' height='28' rx='3' fill='%23DFE6EE'/> <rect x='236' y='50' width='52' height='30' rx='3' fill='%23E8E3EA'/><rect x='296' y='40' width='44' height='40' rx='3' fill='%23DFE6EE'/> <rect x='240' y='116' width='38' height='34' rx='3' fill='%23ECE6DC'/><rect x='286' y='108' width='58' height='42' rx='3' fill='%23E4E7EA'/><rect x='350' y='124' width='36' height='26' rx='3' fill='%23DFE6EE'/> <rect x='236' y='184' width='64' height='36' rx='3' fill='%23DFE6EE'/><rect x='308' y='190' width='40' height='30' rx='3' fill='%23E8E3EA'/></g></svg>") left -70px bottom 0 / 380px auto no-repeat,url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='260' viewBox='0 0 420 260' opacity='.55'> <g fill='none' stroke='%23D3DAE2' stroke-width='3'><path d='M20 20v240M200 20v240M220 20v240M400 20v240'/><path d='M20 80h180M20 150h180M20 220h180M220 80h180M220 150h180M220 220h180'/></g> <g><rect x='34' y='44' width='46' height='36' rx='3' fill='%23ECE6DC'/><rect x='86' y='54' width='34' height='26' rx='3' fill='%23DFE6EE'/><rect x='128' y='38' width='56' height='42' rx='3' fill='%23E4E7EA'/> <rect x='40' y='112' width='60' height='38' rx='3' fill='%23DFE6EE'/><rect x='108' y='122' width='40' height='28' rx='3' fill='%23E8E3EA'/> <rect x='34' y='186' width='38' height='34' rx='3' fill='%23E4E7EA'/><rect x='80' y='176' width='54' height='44' rx='3' fill='%23ECE6DC'/><rect x='142' y='192' width='44' height='28' rx='3' fill='%23DFE6EE'/> <rect x='236' y='50' width='52' height='30' rx='3' fill='%23E8E3EA'/><rect x='296' y='40' width='44' height='40' rx='3' fill='%23DFE6EE'/> <rect x='240' y='116' width='38' height='34' rx='3' fill='%23ECE6DC'/><rect x='286' y='108' width='58' height='42' rx='3' fill='%23E4E7EA'/><rect x='350' y='124' width='36' height='26' rx='3' fill='%23DFE6EE'/> <rect x='236' y='184' width='64' height='36' rx='3' fill='%23DFE6EE'/><rect x='308' y='190' width='40' height='30' rx='3' fill='%23E8E3EA'/></g></svg>") right -70px bottom 0 / 380px auto no-repeat,linear-gradient(180deg,#EDF1F5 0%,#F3F5F7 40%,#F7F7F5 62%,#F7F7F5 100%)}
+.seite .hero.mit-bild-unten .lead{max-width:860px}
+.sa{max-width:880px}
+@media (max-width:899px){.seite .hero.mit-bild-unten{background:linear-gradient(180deg,#EDF1F5 0%,#F7F7F5 60%)}}
+@media (max-width:600px){.sa-st{min-width:112px}.sa-st .pill{left:0;min-width:0;font-size:.625rem;padding:2px 7px}}
+/* Kurz gesagt: Kernsatz als eigene ruhige Section */
+#kurz{padding-block:clamp(56px,7vw,96px)}
+.seite .satz-text{font:400 clamp(1.25rem,1rem + .9vw,1.625rem)/1.45 "Source Serif 4",Georgia,serif;color:#22272B;max-width:46ch;margin:0 auto}
+/* Prozess: nur Schritt + Rolle, Details auf der Leistungsseite */
+#prozess .fl-schritt{grid-row:auto;grid-template-rows:none}
+#prozess .fl-box{min-height:96px;justify-content:flex-start}
+#prozess .fl-box .fl-sie{margin:auto 0 0;align-self:flex-start;font-size:.6875rem;padding:2px 8px;border-radius:999px}
+#prozess .fl-schritt:not(:last-child)::after{top:48px}
+#prozess .fluss{margin-top:40px}
+#prozess .fl-fuss{margin-top:18px}
