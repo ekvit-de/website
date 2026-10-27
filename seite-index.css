@@ -59,7 +59,7 @@ a{color:#22272B}a:hover{color:#1F2428}
 .fl-schritt:not(:last-child)::after{top:39px}
 /* Vertrauen (auf Grau: Karten weiß) */
 #vertrauen .karten{gap:16px;margin-top:44px}
-#vertrauen .karte{background:#FFFFFF;border:0;border-radius:14px;padding:28px;gap:8px}
+#vertrauen .karte{background:#FFFFFF;border:1px solid #E6E6E2;border-radius:14px;padding:28px;gap:8px}
 #vertrauen .karte h3{font-size:1.125rem}
 .v-icon{width:44px;height:44px;border-radius:12px;background:#EFF0EC;display:grid;place-items:center;margin-bottom:14px}
 #vertrauen .knoepfe{justify-content:center}
@@ -102,8 +102,9 @@ a{color:#22272B}a:hover{color:#1F2428}
 #prozess .fl-schritt:not(:last-child)::after{top:48px}
 #prozess .fluss{margin-top:40px}
 #prozess .fl-fuss{margin-top:18px}
+/* R12 (Josch): unter dem Hero alles Weiß, Abgrenzung über Abstand + Trennlinie */
 /* R11: „Ohne Integration“ als ruhige Fortsetzung des Hero (gleicher Grund, mittig, kompakt) */
-.seite #ohne{border-top:0;padding-top:clamp(8px,2vw,24px);padding-bottom:clamp(56px,7vw,96px);text-align:center}
+.seite #ohne{text-align:center}
 .seite #ohne h2{max-width:none;margin:0 auto 28px;font-size:clamp(1.375rem,1.1rem + 1vw,1.875rem)}
 .seite #ohne .ex-liste{max-width:960px;margin-inline:auto;text-align:left}
 .seite #ohne .ex-fuss{text-align:center}
