@@ -19,19 +19,19 @@ a{color:#22272B}a:hover{color:#1F2428}
 .sa-b2{animation:sab2 10s infinite}.sa-c2{animation:sac2 10s infinite}
 .sa-b3{animation:sab3 10s infinite}.sa-c3{animation:sac3 10s infinite}
 .sa-b4{animation:sab4 10s infinite}.sa-c4{animation:sac4 10s infinite}
-@keyframes sab1{0%,20%{opacity:0}23%,90%{opacity:1}96%,100%{opacity:0}}
-@keyframes sab2{0%,25%{opacity:0}28%,90%{opacity:1}96%,100%{opacity:0}}
-@keyframes sab3{0%,30%{opacity:0}33%,90%{opacity:1}96%,100%{opacity:0}}
-@keyframes sab4{0%,35%{opacity:0}38%,90%{opacity:1}96%,100%{opacity:0}}
-@keyframes sac1{0%,48%{opacity:0}51%,90%{opacity:1}96%,100%{opacity:0}}
-@keyframes sac2{0%,55%{opacity:0}58%,90%{opacity:1}96%,100%{opacity:0}}
-@keyframes sac3{0%,62%{opacity:0}65%,90%{opacity:1}96%,100%{opacity:0}}
-@keyframes sac4{0%,69%{opacity:0}72%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sab1{0%,4%{opacity:0}7%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sab2{0%,9%{opacity:0}12%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sab3{0%,14%{opacity:0}17%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sab4{0%,19%{opacity:0}22%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sac1{0%,30%{opacity:0}33%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sac2{0%,37%{opacity:0}40%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sac3{0%,44%{opacity:0}47%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sac4{0%,51%{opacity:0}54%,90%{opacity:1}96%,100%{opacity:0}}
 .sa-fort{display:grid;gap:6px;margin-top:2px}
 .sa-fort-l{font-size:.75rem;color:#6F767C}
 .sa-balken{height:6px;border-radius:3px;background:#EEEEEA;overflow:hidden}
 .sa-balken span{display:block;height:100%;width:0;background:#1F2428;animation:sabar 10s infinite}
-@keyframes sabar{0%,48%{width:0}51%,55%{width:25%}58%,62%{width:50%}65%,69%{width:75%}72%,90%{width:88%}96%,100%{width:0}}
+@keyframes sabar{0%,30%{width:0}33%,37%{width:25%}40%,44%{width:50%}47%,51%{width:75%}54%,90%{width:88%}96%,100%{width:0}}
 @media (prefers-reduced-motion:reduce){.sa-st .pill+.pill,.sa-balken span{animation:none}.sa-st [class*="sa-c"]{opacity:1}.sa-balken span{width:88%}}
 /* Service-Signal: Label, Häkchen, Team-Hinweis, So arbeiten wir */
 .hero-haken{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px;font-size:.875rem;color:#4A5157}
@@ -102,3 +102,8 @@ a{color:#22272B}a:hover{color:#1F2428}
 #prozess .fl-schritt:not(:last-child)::after{top:48px}
 #prozess .fluss{margin-top:40px}
 #prozess .fl-fuss{margin-top:18px}
+/* R11: „Ohne Integration“ als ruhige Fortsetzung des Hero (gleicher Grund, mittig, kompakt) */
+.seite #ohne{border-top:0;padding-top:clamp(8px,2vw,24px);padding-bottom:clamp(56px,7vw,96px);text-align:center}
+.seite #ohne h2{max-width:none;margin:0 auto 28px;font-size:clamp(1.375rem,1.1rem + 1vw,1.875rem)}
+.seite #ohne .ex-liste{max-width:960px;margin-inline:auto;text-align:left}
+.seite #ohne .ex-fuss{text-align:center}
