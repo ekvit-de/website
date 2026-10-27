@@ -10,15 +10,15 @@ a{color:#22272B}a:hover{color:#1F2428}
 .kopf-mitte+.knoepfe,.kopf-mitte .knoepfe{justify-content:center}
 .kopf-rechts{text-align:right}
 .seite .kopf-rechts h2,.kopf-rechts .text{margin-left:auto}
-/* Hero-Animation Start: Status je Differenz wechselt von „fehlt“ über „angefragt“ zum Ergebnis (18 s Schleife) */
+/* Hero-Animation Start: Status je Differenz wechselt von „fehlt“ über „angefragt“ zum Ergebnis (10 s Schleife) */
 .sa{max-width:760px;margin:0 auto}
 .sa-st{position:relative;height:30px;min-width:170px}
 .sa-st .pill{position:absolute;left:10px;top:50%;transform:translateY(-50%);min-width:150px;text-align:center}
 .sa-st .pill+.pill{opacity:0}
-.sa-b1{animation:sab1 18s infinite}.sa-c1{animation:sac1 18s infinite}
-.sa-b2{animation:sab2 18s infinite}.sa-c2{animation:sac2 18s infinite}
-.sa-b3{animation:sab3 18s infinite}.sa-c3{animation:sac3 18s infinite}
-.sa-b4{animation:sab4 18s infinite}.sa-c4{animation:sac4 18s infinite}
+.sa-b1{animation:sab1 10s infinite}.sa-c1{animation:sac1 10s infinite}
+.sa-b2{animation:sab2 10s infinite}.sa-c2{animation:sac2 10s infinite}
+.sa-b3{animation:sab3 10s infinite}.sa-c3{animation:sac3 10s infinite}
+.sa-b4{animation:sab4 10s infinite}.sa-c4{animation:sac4 10s infinite}
 @keyframes sab1{0%,20%{opacity:0}23%,90%{opacity:1}96%,100%{opacity:0}}
 @keyframes sab2{0%,25%{opacity:0}28%,90%{opacity:1}96%,100%{opacity:0}}
 @keyframes sab3{0%,30%{opacity:0}33%,90%{opacity:1}96%,100%{opacity:0}}
@@ -30,7 +30,7 @@ a{color:#22272B}a:hover{color:#1F2428}
 .sa-fort{display:grid;gap:6px;margin-top:2px}
 .sa-fort-l{font-size:.75rem;color:#6F767C}
 .sa-balken{height:6px;border-radius:3px;background:#EEEEEA;overflow:hidden}
-.sa-balken span{display:block;height:100%;width:0;background:#1F2428;animation:sabar 18s infinite}
+.sa-balken span{display:block;height:100%;width:0;background:#1F2428;animation:sabar 10s infinite}
 @keyframes sabar{0%,48%{width:0}51%,55%{width:25%}58%,62%{width:50%}65%,69%{width:75%}72%,90%{width:88%}96%,100%{width:0}}
 @media (prefers-reduced-motion:reduce){.sa-st .pill+.pill,.sa-balken span{animation:none}.sa-st [class*="sa-c"]{opacity:1}.sa-balken span{width:88%}}
 /* Service-Signal: Label, Häkchen, Team-Hinweis, So arbeiten wir */
