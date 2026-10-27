@@ -249,3 +249,5 @@ p{margin:0 0 14px}
 /* rg-43 Farbsystem V98 (Josch 27.10.): schwarz statt grün, sanftes Lime nur für Status – gleich wie design.css */
 :root{--gruen:#1F2428;--gruen-hover:#000000;--gruen-hell:#EFF0EC;--ok:#1F2428;--ok-bg:#DFEEA6;--lime:#DFEEA6}
 .sek--dunkel .k--primaer{background:#FFFFFF;color:#1F2428}.sek--dunkel .k--primaer:hover{background:#EFF0EC}
+/* rg-54 (Josch): Headlines eine Stufe heller, wie Design-Seiten */
+h1,h2,h3{color:#3A4046}.sek--dunkel h2,.sek--dunkel h3{color:#FFFFFF}

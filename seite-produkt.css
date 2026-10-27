@@ -134,6 +134,9 @@ a{color:#22272B}a:hover{color:#1F2428}
 .kurz-leg b.ek{border-color:#1F2428;background:#FFFFFF}
 .kurz-leg i{width:9px;height:9px;border-radius:50%;background:#DFEEA6;box-shadow:none}
 .kurz-leg a{margin-left:auto;font-weight:600;color:#22272B}
+/* R13 (Josch): Headlines eine Stufe heller als Tiefschwarz */
+.seite h1,.seite h2,.seite h3,.seite .sw-k b,.seite .kw-titel{color:#3A4046}
+.seite .sek--dunkel h2,.seite .sek--dunkel h3{color:#FFFFFF}
 /* R8 Feedback Josch 27.10. abends: mehr Luft zwischen gleichfarbigen Sections + feine Trennlinie, Knöpfe kleiner */
 .seite .sek--grau+.sek--grau,.seite .sek--hell+.sek--hell{border-top:0;padding-top:var(--sektion);position:relative}
 .seite .sek--grau+.sek--grau::before,.seite .sek--hell+.sek--hell::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(var(--breite),calc(100% - 2*var(--rand)));border-top:1px solid #E6E6E2}
@@ -178,6 +181,9 @@ a{color:#22272B}a:hover{color:#1F2428}
 .seite .kopf-mitte h2,.kopf-mitte .text{margin-inline:auto}
 .kopf-mitte .knoepfe{justify-content:center}
 .kopf-mitte .form-karte{margin-inline:auto;text-align:left}
+/* R13 (Josch): Headlines eine Stufe heller als Tiefschwarz */
+.seite h1,.seite h2,.seite h3,.seite .sw-k b,.seite .kw-titel{color:#3A4046}
+.seite .sek--dunkel h2,.seite .sek--dunkel h3{color:#FFFFFF}
 /* R8 Feedback Josch 27.10. abends: mehr Luft zwischen gleichfarbigen Sections + feine Trennlinie, Knöpfe kleiner */
 .seite .sek--grau+.sek--grau,.seite .sek--hell+.sek--hell{border-top:0;padding-top:var(--sektion);position:relative}
 .seite .sek--grau+.sek--grau::before,.seite .sek--hell+.sek--hell::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(var(--breite),calc(100% - 2*var(--rand)));border-top:1px solid #E6E6E2}
